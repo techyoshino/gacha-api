@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>置型デジタル中小企業ガチャ 神奈川版</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery-3.5.1.min.js"></script>
+  <script src="program.js"></script>
+</head>
+<body>
+  <div class="gacha-video">
+      <script>
+        $(function () {
+        var elements = [
+        '<div class="mv_wrap"><video id="bg-video" src="video/amecomi.mov" width="100%" poster="" muted playsinline onended="myRndLink()"></video></div>',
+        '<div class="mv_wrap"><video id="bg-video" src="video/hakobu.mp4" width="100%" poster="" muted playsinline onended="myRndLink()"></video></div>',
+        '<div class="mv_wrap"><video id="bg-video" src="video/kakuhenKaiten.mp4" width="100%" poster="" muted playsinline onended="myRndLink()"></video></div>',
+        '<div class="mv_wrap"><video id="bg-video" src="video/hassyaKaiten.mov" width="100%" poster="" muted playsinline onended="myRndLink()"></video></div>',
+        '<div class="mv_wrap"><video id="bg-video" src="video/raceKaiten.mp4" width="100%" poster="" muted playsinline onended="myRndLink()"></video></div>',
+        ];
+
+        var randElm = elements[Math.floor(Math.random() * elements.length)];
+        $('.gacha-video').html(randElm);
+   
+        var videoOn = document.getElementById('bg-video');
+        videoOn.play();
+        });
+      </script>
+  </div>
+</body>
+</html>

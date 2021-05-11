@@ -1,0 +1,18 @@
+.gacha-video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.mv_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+body{
+    margin-top:0px;
+    margin-right:0px;
+    margin-bottom:0px;
+    margin-left:0px;
+}

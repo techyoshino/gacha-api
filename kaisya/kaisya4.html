@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>有限会社湘南オートカット工業</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../animsition-master/dist/css/animsition.min.css"/>
+    <script src="../jquery-3.5.1.min.js"></script>
+    <script src="../animsition-master/dist/js/animsition.min.js"></script>
+    <script src="../program.js"></script>
+  </head>
+  <body>
+    <div class="animsition"
+        data-animsition-in-class="zoom-in"
+        data-animsition-in-duration="1000"
+        data-animsition-out-class="zoom-out"
+        data-animsition-out-duration="800">
+        <a href="../index.html">
+        <img src="../gazou/004_shonanauto.jpg" width="100%">
+        </a>
+    </div>
+    <script>
+      document.onkeydown = pageMove;
+
+      function pageMove(event){
+        if(event.keyCode === 82){
+          location.href='../index.html';
+            return false;
+        }
+      }
+    </script>
+</body>
+</html>

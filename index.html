@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>置型デジタル中小企業ガチャ 神奈川版</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animsition-master/dist/css/animsition.min.css"/>
+  <script src="jquery-3.5.1.min.js"></script>
+  <script src="animsition-master/dist/js/animsition.min.js"></script>
+  <script src="program.js"></script>
+</head>
+<body>
+  <div id="content">
+    <!-- スペースキーをクリック代わりにするプログラム
+    <script>
+      document.onkeydown = pageMove;
+  
+      function pageMove(event) {
+          if (event.keyCode === 32) {
+            location.href='move.html';
+              return false;
+          }
+      }
+    </script>
+    -->
+    <!-- sキーをクリック代わりにするプログラム -->
+    <script>
+      document.onkeydown = pageMove;
+
+      function pageMove(event){
+        if(event.keyCode === 83 || event.keyCode === 32){
+          location.href='move.html';
+            return false;
+        }
+      }
+    </script>
+    <!-- ランダムリンクするボタン -->
+    <div>
+      <input type="image" img src="gazou/display_top_oita.jpg" width="100%" onclick="location.href='move.html'">
+    </div>
+  </div>
+</body>
+</html>
