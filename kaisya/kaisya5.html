@@ -20,15 +20,28 @@
         <img src="../gazou/005_tango.jpg" width="100%">
         </a>
     </div>
+
+     
+    <!-- ランダムリンクするボタン -->
     <script>
       document.onkeydown = pageMove;
 
       function pageMove(event){
         if(event.keyCode === 82){
           location.href='../index.html';
-            return false;
         }
+
+        if(event.keyCode === 83){
+          location.href='../move.html';
+        }
+
+        if(event.keyCode === 32){
+          location.href='../move.html';
+        }
+
       }
     </script>
+
+
 </body>
 </html>
