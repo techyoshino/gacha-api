@@ -1,45 +1,82 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>置型デジタル中小企業ガチャ 神奈川版</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="animsition-master/dist/css/animsition.min.css"/>
-  <script src="jquery-3.5.1.min.js"></script>
-  <script src="animsition-master/dist/js/animsition.min.js"></script>
-  <script src="program.js"></script>
-</head>
-<body>
-  <div id="content">
-    <!-- スペースキーをクリック代わりにするプログラム
-    <script>
-      document.onkeydown = pageMove;
-  
-      function pageMove(event) {
-          if (event.keyCode === 32) {
-            location.href='move.html';
-              return false;
-          }
-      }
-    </script>
-    -->
-    <!-- sキーをクリック代わりにするプログラム -->
-    <script>
-      document.onkeydown = pageMove;
+<html lang="ja">
 
-      function pageMove(event){
-        if(event.keyCode === 83 || event.keyCode === 32){
-          location.href='move.html';
-            return false;
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>ガチャ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap" rel="stylesheet">
+</head>
+<header></header>
+
+<body>
+    <!-- メインここから -->
+    <div class="wrapper">
+
+        <img src="./img/back.png" alt="" class="wrapper_img">
+        <h1 class="logo">
+
+            <h2 class="logo_sub">
+                中小企業を応援する<br>ガチャガチャプロジェクト
+            </h2>
+            <!-- *******キャッチコピーここまで******* -->
+            <img src="./img/logo.png" alt="" class="logo_main">
+        </h1>
+        <!-- *******業種ここを差し替える******* -->
+        <h2 class="menu">
+            <!-- <p class="menu_work">製造業</p>
+            <p class="menu_area">in宇佐市</p> -->
+        </h2>
+        <!-- *******業種ここまで******* -->
+
+        <div class="coin">
+            <img src="./img/coin.png" alt="" class="coin_img" width="156px">
+            <p class="coin_p">
+                ガチャコインを<br>入れてください
+            </p>
+            <img src="./img/arrow.png" alt="" class="coin_arrow">
+        </div>
+
+
+        <!-- メインここまで -->
+
+        <div class="stars">
+            <span class="s"></span>
+            <span class="s"></span>
+            <span class="s"></span>
+            <span class="s"></span>
+            <span class="s"></span>
+            <span class="m"></span>
+            <span class="m"></span>
+            <span class="m"></span>
+            <span class="m"></span>
+            <span class="m"></span>
+            <span class="l"></span>
+            <span class="l"></span>
+            <span class="l"></span>
+            <span class="l"></span>
+            <span class="l"></span>
+        </div>
+    </div>
+
+    <script>
+        document.onkeydown = pageMove;
+
+        function pageMove(event) {
+            if (event.keyCode === 83 || event.keyCode === 32) {
+                location.href = 'move.html';
+                return false;
+            }
         }
-      }
     </script>
     <!-- ランダムリンクするボタン -->
-    <div>
-      <input type="image" img src="gazou/display_top.png" width="100%" onclick="location.href='move.html'">
-    </div>
-  </div>
+
 </body>
+
 </html>
