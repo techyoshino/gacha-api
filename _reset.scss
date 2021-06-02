@@ -79,14 +79,15 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 100%;
-  vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    vertical-align: baseline;
 }
+
 article,
 aside,
 details,
@@ -98,39 +99,47 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+    display: block;
 }
+
 html {
-  overflow-y: scroll;
+    overflow-y: hidden;
 }
+
 blockquote,
 q {
-  quotes: none;
+    quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
-  content: none;
+    content: "";
+    content: none;
 }
+
 input,
 textarea {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
+
 ol,
 ul {
-  list-style: none;
+    list-style: none;
 }
+
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
+
 caption,
 th {
-  text-align: left;
+    text-align: left;
 }
+
 a:focus {
-  outline: none;
+    outline: none;
 }
