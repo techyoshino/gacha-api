@@ -1,263 +1,299 @@
 @charset "utf-8";
-@import "reset", "setting";
-
+@import "reset",
+"setting";
 $red: #e95532;
 $subtitle-color: #206bb5;
 $white: white;
-
 // アニメーションここから
 @include keyframes(animation01) {
-  0% {
-    transform: translate(-50%, -48%) scale(1);
-  }
-  50% {
-    transform: translate(-50%, -56%) scale(1.2);
-  }
-
-  100% {
-    transform: translate(-50%, -48%) scale(1);
-  }
+    0% {
+        transform: translate(-50%, -48%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -56%) scale(1.2);
+    }
+    100% {
+        transform: translate(-50%, -48%) scale(1);
+    }
 }
-// アニメーションここまで
 
+// アニメーションここまで
 body {
-  @include font-style();
+    @include font-style();
 }
 
 .wrapper {
-  margin: 0 auto;
-  width: 800px;
-  height: 1200px;
-  position: relative;
-  &_img {
-    display: block;
     margin: 0 auto;
-    width: 100%;
+    width: 800px;
     height: 1200px;
-  }
+    position: relative;
+    &_img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        height: 1200px;
+    }
 }
 
 .logo {
-  &_sub {
-    @include animation(animation01, 2s, infinite, 0.1s, ease-in-out, normal);
-    color: $red;
-    @include font-size(31);
-    font-family: "Noto Sans JP", sans-serif;
-    // font-weight: 900;
-    text-align: center;
-    position: absolute;
-    top: 180px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  &_main {
-    position: absolute;
-    top: 36%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+    &_sub {
+        @include animation(animation01, 2s, infinite, 0.1s, ease-in-out, normal);
+        color: $red;
+        @include font-size(31);
+        font-family: "Noto Sans JP", sans-serif;
+        // font-weight: 900;
+        text-align: center;
+        position: absolute;
+        top: 180px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &_main {
+        position: absolute;
+        top: 36%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .menu {
-  &_work {
-    @include font-size(121);
-    font-family: "M PLUS Rounded 1c", sans-serif;
-    font-weight: 700;
-    width: 450px;
-    text-align: center;
-    background-color: $subtitle-color;
-    color: $white;
-    border-radius: 20px;
-    display: inline-block;
-    position: absolute;
-    top: 61%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  &_area {
-    @include font-size(54);
-    font-family: "M PLUS Rounded 1c", sans-serif;
-    font-weight: 700;
-    color: $subtitle-color;
-    position: absolute;
-    top: 71%;
-    left: 63%;
-    transform: translate(-50%, -50%);
-  }
+    &_work {
+        @include font-size(121);
+        font-family: "M PLUS Rounded 1c", sans-serif;
+        font-weight: 700;
+        width: 450px;
+        text-align: center;
+        background-color: $subtitle-color;
+        color: $white;
+        border-radius: 20px;
+        display: inline-block;
+        position: absolute;
+        top: 61%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &_area {
+        @include font-size(54);
+        font-family: "M PLUS Rounded 1c", sans-serif;
+        font-weight: 700;
+        color: $subtitle-color;
+        position: absolute;
+        top: 71%;
+        left: 63%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .coin {
-  &_img {
-    position: absolute;
-    top: 82%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  &_p {
-    @include font-size(26);
-    font-family: "M PLUS Rounded 1c", sans-serif;
-    font-weight: 400;
-    position: absolute;
-    top: 80%;
-    left: 74%;
-    transform: translate(-50%, -50%);
-  }
-  &_arrow {
-    position: absolute;
-    top: 93%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    @include animation(animation01, 2s, infinite, 0.1s, ease-in-out, normal);
-  }
+    &_img {
+        position: absolute;
+        top: 82%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &_p {
+        @include font-size(26);
+        font-family: "M PLUS Rounded 1c", sans-serif;
+        font-weight: 400;
+        position: absolute;
+        top: 80%;
+        left: 74%;
+        transform: translate(-50%, -50%);
+    }
+    &_arrow {
+        position: absolute;
+        top: 93%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include animation(animation01, 2s, infinite, 0.1s, ease-in-out, normal);
+    }
 }
 
 // ここからスター
 .stars {
-  z-index: 50;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 800px;
-  height: 1200px;
+    z-index: 50;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 1200px;
 }
 
 .stars span {
-  position: relative;
+    position: relative;
 }
 
 .stars span:before {
-  content: "";
-  position: absolute;
-  width: 6px;
-  height: 6px;
-
-  /*星のサイズ調節*/
-  transform: scale(1);
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    /*星のサイズ調節*/
+    transform: scale(1);
 }
 
 .stars span.s:before {
-  /*20px 20pxが中央*/
-  box-shadow: 20px 20px #ffffff;
+    /*20px 20pxが中央*/
+    box-shadow: 20px 20px #ffffff;
 }
 
 .stars span.m:before {
-  box-shadow:
-    /*1段目*/ 20px 10px #fff176, /*2段目*/ 10px 20px #fff176,
-    20px 20px #ffffff, 30px 20px #fff176, /*3段目*/ 20px 30px #fff176;
+    box-shadow: /*1段目*/
+    20px 10px #fff176, /*2段目*/
+    10px 20px #fff176, 20px 20px #ffffff, 30px 20px #fff176, /*3段目*/
+    20px 30px #fff176;
 }
 
 .stars span.l:before {
-  box-shadow:
-    /*0段目*/ 20px 0px #fdd835, /*1段目*/ 20px 10px #fff176,
-    /*2段目*/ 0px 20px #fdd835, 10px 20px #fff176, 20px 20px #ffffff,
-    30px 20px #fff176, 40px 20px #fdd835, /*3段目*/ 20px 30px #fff176,
-    /*4段目*/ 20px 40px #fdd835;
+    box-shadow: /*0段目*/
+    20px 0px #fdd835, /*1段目*/
+    20px 10px #fff176, /*2段目*/
+    0px 20px #fdd835, 10px 20px #fff176, 20px 20px #ffffff, 30px 20px #fff176, 40px 20px #fdd835, /*3段目*/
+    20px 30px #fff176, /*4段目*/
+    20px 40px #fdd835;
 }
+
 
 /*
 星の位置とアニメーション指定
 最初の秒はアニメーション時間、2つ目は開始までの時間
 */
+
 .stars span:nth-child(1) {
-  left: 10%;
-  top: 10%;
-  animation: star-anim 8s 0s infinite;
+    left: 10%;
+    top: 10%;
+    animation: star-anim 8s 0s infinite;
 }
+
 .stars span:nth-child(2) {
-  left: 80%;
-  top: 20%;
-  animation: star-anim 6s 1s infinite;
+    left: 80%;
+    top: 20%;
+    animation: star-anim 6s 1s infinite;
 }
+
 .stars span:nth-child(3) {
-  left: 60%;
-  top: 40%;
-  animation: star-anim 5s 2s infinite;
+    left: 60%;
+    top: 40%;
+    animation: star-anim 5s 2s infinite;
 }
+
 .stars span:nth-child(4) {
-  left: 20%;
-  top: 70%;
-  animation: star-anim 7s 3s infinite;
+    left: 20%;
+    top: 70%;
+    animation: star-anim 7s 3s infinite;
 }
+
 .stars span:nth-child(5) {
-  left: 80%;
-  top: 80%;
-  animation: star-anim 7s 4s infinite;
+    left: 80%;
+    top: 80%;
+    animation: star-anim 7s 4s infinite;
 }
 
 .stars span:nth-child(6) {
-  left: 40%;
-  top: 10%;
-  animation: star-anim 4s 0s infinite;
+    left: 40%;
+    top: 10%;
+    animation: star-anim 4s 0s infinite;
 }
+
 .stars span:nth-child(7) {
-  left: 10%;
-  top: 50%;
-  animation: star-anim 7s 1s infinite;
+    left: 10%;
+    top: 50%;
+    animation: star-anim 7s 1s infinite;
 }
+
 .stars span:nth-child(8) {
-  left: 50%;
-  top: 50%;
-  animation: star-anim 8s 2s infinite;
+    left: 50%;
+    top: 50%;
+    animation: star-anim 8s 2s infinite;
 }
+
 .stars span:nth-child(9) {
-  left: 90%;
-  top: 90%;
-  animation: star-anim 5s 3s infinite;
+    left: 90%;
+    top: 90%;
+    animation: star-anim 5s 3s infinite;
 }
+
 .stars span:nth-child(10) {
-  left: 80%;
-  top: 50%;
-  animation: star-anim 7s 4s infinite;
+    left: 80%;
+    top: 50%;
+    animation: star-anim 7s 4s infinite;
 }
 
 .stars span:nth-child(11) {
-  left: 90%;
-  top: 10%;
-  animation: star-anim 5s 0s infinite;
-}
-.stars span:nth-child(12) {
-  left: 10%;
-  top: 80%;
-  animation: star-anim 6s 1s infinite;
-}
-.stars span:nth-child(13) {
-  left: 30%;
-  top: 20%;
-  animation: star-anim 7s 2s infinite;
-}
-.stars span:nth-child(14) {
-  left: 60%;
-  top: 90%;
-  animation: star-anim 8s 3s infinite;
-}
-.stars span:nth-child(15) {
-  left: 80%;
-  top: 50%;
-  animation: star-anim 7s 4s infinite;
+    left: 90%;
+    top: 10%;
+    animation: star-anim 5s 0s infinite;
 }
 
+.stars span:nth-child(12) {
+    left: 10%;
+    top: 80%;
+    animation: star-anim 6s 1s infinite;
+}
+
+.stars span:nth-child(13) {
+    left: 30%;
+    top: 20%;
+    animation: star-anim 7s 2s infinite;
+}
+
+.stars span:nth-child(14) {
+    left: 60%;
+    top: 90%;
+    animation: star-anim 8s 3s infinite;
+}
+
+.stars span:nth-child(15) {
+    left: 80%;
+    top: 50%;
+    animation: star-anim 7s 4s infinite;
+}
+
+
 /*アニメーションキーフレーム*/
+
 @keyframes star-anim {
-  0% {
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  10% {
-    opacity: 0;
-  }
-  55% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 1;
-  }
-  95% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 0;
+    }
+    55% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.gacha-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.mv_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+body {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
 }
