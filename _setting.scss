@@ -1,0 +1,161 @@
+// フォントの指定
+// @include font-style();
+@mixin font-style($letter-spacing: 0.05em) {
+  font-family: "Barlow", "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体",
+    "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  letter-spacing: $letter-spacing;
+}
+
+// フォントサイズ px表示でrem指定
+// @include font-size(12);
+@mixin font-size($size, $base: 16) {
+  font-size: $size + px;
+  font-size: ($size / $base) + rem;
+}
+
+// 両端揃え
+// @include justify();
+@mixin justify() {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+// ホバーで色変え+下線(リンクで使用）
+// &:hover { @include a-hover(#345c39, 2px, 2px); }
+@mixin a-hover($color: #345c39, $height: 2px, $border-width: 2px) {
+  color: $color;
+  height: $height;
+  display: inline-block;
+  border-bottom: solid $color $border-width;
+}
+
+// 親要素(position: relative;)に対して中央寄せ
+// @include center(xy);
+// @include center(x);
+// @include center(y);
+@mixin center($direction) {
+  position: absolute;
+  @if $direction==xy {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if $direction==x {
+    left: 50%;
+    transform: translateX(-50%);
+  } @else if $direction==y {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// オーバーフローでスクロールここから
+// .hoge{  @include scroll(555px, 145px)  }
+
+@mixin scroll($width: 555px, $height: 145px) {
+  overflow: scroll;
+  width: $width;
+  height: $height;
+}
+
+// オーバーフローで...表示
+// @include line-truncate();
+@mixin line-truncate() {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// オーバーフローで...表示（複数行対応Chrome/Safariのみ）
+// width: 400px;  @include lines-truncate(3);
+@mixin lines-truncate($lines: 2) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+}
+
+// ---------アニメーションから ---------
+
+// 頭にコピペするこの行の下から
+
+// @include keyframes(animation01) {
+//   0% {
+//     opacity: 0;
+//     transform: translateX(100%);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: translateX(0);
+//   }
+// }
+
+// ここの行の上まで
+
+// アニメーションさせる要素にコピペ(名前 デュレーション  回数 ディレイ タイミング ディレクション）
+// #hoge{  この下の行から
+
+//  @include animation(animation01, 2s, infinite, 0.1s, ease-in-out, normal);
+
+// }  この上の行まで
+
+// キーフレーム生成
+@mixin keyframes($animation-name: animaton) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+// アニメーション生成(名前 デュレーション  回数 ディレイ タイミング ディレクション)
+@mixin animation(
+  $animation-name,
+  $duration: 2s,
+  $count: infinite,
+  $delay: 3s,
+  $timing: ease-in-out,
+  $direction: normal
+) {
+  -webkit-animation: $animation-name;
+  -moz-animation: $animation-name;
+  animation: $animation-name;
+  animation-duration: $duration;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-iteration-count: $count;
+  animation-delay: $delay;
+  animation-timing-function: $timing;
+  animation-direction: $direction;
+}
+
+// $timing
+// ease	開始と終了をゆっくり変化
+// linear	一定の速度で変化
+// ease-in	最初はゆっくりで、だんだん速く
+// ease-out	最初は速く、だんだんゆっくり
+// ease-in-out	開始と終了をゆっくり変化。「ease」と似てるがこちらの方がさらにゆっくり変化
+// step-start	開始時に最後の段階へ一気に変化
+// step-end	終了時に最後の段階へ一気に変化
+
+// $direction
+// normal	最初（0％）から最後（100％）に向かって順方向に再生
+// reverse	最後（100％）から最初（0％）に向かって逆方向に再生
+// alternate	順方向と逆方向を交互に再生。行って戻るようなイメージなのでアニメーションの切れ目がなくなる
+// alternate-reverse	「alternate」と似ているがこちらは逆方向から始まり、順方向と交互に再生
+
+// ---------アニメーションここまで ---------
+
+// クリアフィックスここから
+// .hoge {  @include clearfix;  }
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
